@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="SkillData" load_steps=2 format=3 uid="uid://v34yff8l6hm2"]
+
+[ext_resource type="Script" uid="uid://b0peixbtl1pji" path="res://data/skill_data/skill_data.gd" id="1_584ls"]
+
+[resource]
+script = ExtResource("1_584ls")
+skill_name = "Hunting"
+skill_energy_cost = 4

@@ -1,0 +1,45 @@
+class_name itemEnums extends Resource
+
+
+
+enum ItemType {
+	NULL,
+	ANIMAL_PARTS,
+	CORPSE,
+	FORAGE,
+	PROVISIONS,
+	TOOL,
+}
+
+
+
+enum AnimalParts {
+	NULL,
+	ANTLER,
+	ANIMAL_BONE,
+	DEER_HIDE,
+	SQUIRREL_HIDE,
+	GOLDEN_SQUIRREL_HIDE,
+}
+
+enum Corpse {
+	NULL,
+	DEER_CORPSE,
+	SQUIRREL_CORPSE,
+	GOLDEN_SQUIRREL_CORPSE,
+}
+
+enum Forage {
+	NULL,
+	WILD_BERRIES,
+	WILD_NUTS,
+	WILD_MUSHROOMS,
+	NIGHTBLOOM,
+}
+
+enum Provision {
+	NULL,
+	VENISON,
+	SQUIRREL_MEAT,
+	GOLDEN_SQUIRREL_MEAT,
+}

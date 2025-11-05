@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="ForageData" load_steps=2 format=3 uid="uid://dpnkp0x6egsfy"]
+
+[ext_resource type="Script" uid="uid://ga1ynomse3tc" path="res://data/item_data/forage_data/forage_data.gd" id="1_41yr6"]
+
+[resource]
+script = ExtResource("1_41yr6")
+forage_key = 3
+item_name = "Wild mushrooms"
+item_type = 1
+rarity = "uncommon"

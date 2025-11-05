@@ -1,0 +1,7 @@
+[gd_resource type="Resource" script_class="CorpseData" load_steps=2 format=3 uid="uid://cenuimc713vd1"]
+
+[ext_resource type="Script" uid="uid://c0by2261o2pi4" path="res://data/item_data/corpse_data/corpse_data.gd" id="1_oxt8t"]
+
+[resource]
+script = ExtResource("1_oxt8t")
+metadata/_custom_type_script = "uid://c0by2261o2pi4"

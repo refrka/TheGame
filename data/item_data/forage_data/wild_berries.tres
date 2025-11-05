@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="ForageData" load_steps=2 format=3 uid="uid://cjtvqnut0uxxb"]
+
+[ext_resource type="Script" uid="uid://ga1ynomse3tc" path="res://data/item_data/forage_data/forage_data.gd" id="1_dyllj"]
+
+[resource]
+script = ExtResource("1_dyllj")
+forage_key = 1
+item_name = "Wild berries"
+item_type = 1
+rarity = "common"

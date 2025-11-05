@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="LocationData" load_steps=2 format=3 uid="uid://dvbkh4bcs084g"]
+
+[ext_resource type="Script" uid="uid://b658sl3rqwu7h" path="res://data/location_data/location_data.gd" id="1_3yxdp"]
+
+[resource]
+script = ExtResource("1_3yxdp")
+location_name = "Forest"
+location_key = 1
+forage_pool = Array[int]([1, 2, 3, 4])
+fauna_pool = Array[int]([1, 2, 3])

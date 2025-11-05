@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="ForageData" load_steps=2 format=3 uid="uid://bndxw1n1wlx68"]
+
+[ext_resource type="Script" uid="uid://ga1ynomse3tc" path="res://data/item_data/forage_data/forage_data.gd" id="1_1mwc1"]
+
+[resource]
+script = ExtResource("1_1mwc1")
+forage_key = 4
+item_name = "Nightbloom"
+item_type = 1
+rarity = "epic"
+metadata/_custom_type_script = "uid://ga1ynomse3tc"

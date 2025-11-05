@@ -1,0 +1,240 @@
+[gd_scene load_steps=11 format=3 uid="uid://cds0l3uushl7f"]
+
+[ext_resource type="Script" uid="uid://1hd6byojdir2" path="res://scripts/new_character.gd" id="1_ryrav"]
+[ext_resource type="Script" uid="uid://j3brimyuxsb" path="res://main_game.gd" id="2_feb5d"]
+[ext_resource type="Script" uid="uid://tlqm2b6ve520" path="res://scripts/skills_list.gd" id="3_7jktm"]
+[ext_resource type="Script" uid="uid://dn1x482akd4en" path="res://scripts/character_name.gd" id="3_feb5d"]
+[ext_resource type="Script" uid="uid://ct5f0tt5p8jk5" path="res://scripts/current_energy.gd" id="4_eow3j"]
+[ext_resource type="Script" uid="uid://cwqjr8cgyudm5" path="res://scripts/starting_actions.gd" id="5_7jktm"]
+[ext_resource type="Script" uid="uid://b8wabk3gn8nn7" path="res://scripts/quick_desc.gd" id="6_eow3j"]
+[ext_resource type="Script" uid="uid://vj6kg613v5el" path="res://scripts/inventory_button.gd" id="6_vef74"]
+[ext_resource type="Script" uid="uid://dc8fdqe68apvg" path="res://scripts/event_list.gd" id="8_vef74"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_eow3j"]
+bg_color = Color(1, 1, 1, 1)
+
+[node name="GameRoot" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 4
+theme_override_constants/margin_top = 4
+theme_override_constants/margin_right = 4
+theme_override_constants/margin_bottom = 4
+
+[node name="NewCharacter" type="HBoxContainer" parent="MarginContainer"]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+script = ExtResource("1_ryrav")
+
+[node name="NewNameEntry" type="LineEdit" parent="MarginContainer/NewCharacter"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+size_flags_vertical = 0
+text = "Character Name"
+alignment = 1
+select_all_on_focus = true
+caret_blink = true
+
+[node name="NewNameSubmit" type="Button" parent="MarginContainer/NewCharacter"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 4
+text = "Submit"
+
+[node name="MainGame" type="MarginContainer" parent="MarginContainer"]
+layout_mode = 2
+script = ExtResource("2_feb5d")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/MainGame"]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/MainGame/HBoxContainer"]
+custom_minimum_size = Vector2(125, 0)
+layout_mode = 2
+theme_override_constants/separation = 2
+
+[node name="CharacterName" type="Label" parent="MarginContainer/MainGame/HBoxContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 14
+theme_override_styles/normal = SubResource("StyleBoxFlat_eow3j")
+text = "Name"
+horizontal_alignment = 1
+script = ExtResource("3_feb5d")
+
+[node name="HSeparator" type="HSeparator" parent="MarginContainer/MainGame/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/MainGame/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/MainGame/HBoxContainer/VBoxContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/MainGame/HBoxContainer/VBoxContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+text = "Level:"
+
+[node name="Label2" type="Label" parent="MarginContainer/MainGame/HBoxContainer/VBoxContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+text = "1"
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="MarginContainer/MainGame/HBoxContainer/VBoxContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label2" type="Label" parent="MarginContainer/MainGame/HBoxContainer/VBoxContainer/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+text = "XP:"
+
+[node name="Label3" type="Label" parent="MarginContainer/MainGame/HBoxContainer/VBoxContainer/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+text = "0"
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="MarginContainer/MainGame/HBoxContainer/VBoxContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label2" type="Label" parent="MarginContainer/MainGame/HBoxContainer/VBoxContainer/VBoxContainer/HBoxContainer3"]
+layout_mode = 2
+text = "Health:"
+
+[node name="CurrentHealth" type="Label" parent="MarginContainer/MainGame/HBoxContainer/VBoxContainer/VBoxContainer/HBoxContainer3"]
+layout_mode = 2
+text = "10"
+
+[node name="Label4" type="Label" parent="MarginContainer/MainGame/HBoxContainer/VBoxContainer/VBoxContainer/HBoxContainer3"]
+layout_mode = 2
+text = "/"
+
+[node name="MaxHealth" type="Label" parent="MarginContainer/MainGame/HBoxContainer/VBoxContainer/VBoxContainer/HBoxContainer3"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.1882353, 0.1882353, 1)
+text = "20"
+
+[node name="MaxHealthModifier" type="Label" parent="MarginContainer/MainGame/HBoxContainer/VBoxContainer/VBoxContainer/HBoxContainer3"]
+layout_mode = 2
+text = "(-10)"
+
+[node name="HBoxContainer4" type="HBoxContainer" parent="MarginContainer/MainGame/HBoxContainer/VBoxContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label2" type="Label" parent="MarginContainer/MainGame/HBoxContainer/VBoxContainer/VBoxContainer/HBoxContainer4"]
+layout_mode = 2
+text = "Energy:"
+
+[node name="CurrentEnergy" type="Label" parent="MarginContainer/MainGame/HBoxContainer/VBoxContainer/VBoxContainer/HBoxContainer4"]
+layout_mode = 2
+text = "5"
+script = ExtResource("4_eow3j")
+
+[node name="Label4" type="Label" parent="MarginContainer/MainGame/HBoxContainer/VBoxContainer/VBoxContainer/HBoxContainer4"]
+layout_mode = 2
+text = "/"
+
+[node name="MaxEnergy" type="Label" parent="MarginContainer/MainGame/HBoxContainer/VBoxContainer/VBoxContainer/HBoxContainer4"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.1882353, 0.1882353, 1)
+text = "10"
+
+[node name="MaxEnergyModifier" type="Label" parent="MarginContainer/MainGame/HBoxContainer/VBoxContainer/VBoxContainer/HBoxContainer4"]
+layout_mode = 2
+text = "(-10)"
+
+[node name="HSeparator2" type="HSeparator" parent="MarginContainer/MainGame/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/MainGame/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/MainGame/HBoxContainer/VBoxContainer/MarginContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/MainGame/HBoxContainer/VBoxContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "SKILLS"
+horizontal_alignment = 1
+
+[node name="ScrollContainer" type="ScrollContainer" parent="MarginContainer/MainGame/HBoxContainer/VBoxContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="SkillsList" type="VBoxContainer" parent="MarginContainer/MainGame/HBoxContainer/VBoxContainer/MarginContainer/VBoxContainer/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/separation = 0
+script = ExtResource("3_7jktm")
+
+[node name="InventoryButton" type="Button" parent="MarginContainer/MainGame/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_type_variation = &"InventoryButton"
+text = "Inventory"
+script = ExtResource("6_vef74")
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="MarginContainer/MainGame/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="QuickDesc" type="Label" parent="MarginContainer/MainGame/HBoxContainer/VBoxContainer2"]
+unique_name_in_owner = true
+layout_mode = 2
+horizontal_alignment = 1
+script = ExtResource("6_eow3j")
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/MainGame/HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="StartingActions" type="HBoxContainer" parent="MarginContainer/MainGame/HBoxContainer/VBoxContainer2/MarginContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+script = ExtResource("5_7jktm")
+
+[node name="ForageButton" type="Button" parent="MarginContainer/MainGame/HBoxContainer/VBoxContainer2/MarginContainer/StartingActions"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Forage"
+
+[node name="HuntButton" type="Button" parent="MarginContainer/MainGame/HBoxContainer/VBoxContainer2/MarginContainer/StartingActions"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Hunt"
+
+[node name="SeekShelterButton" type="Button" parent="MarginContainer/MainGame/HBoxContainer/VBoxContainer2/MarginContainer/StartingActions"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Seek Shelter"
+
+[node name="EventList" type="VBoxContainer" parent="MarginContainer/MainGame/HBoxContainer/VBoxContainer2/MarginContainer"]
+layout_mode = 2
+mouse_filter = 2
+script = ExtResource("8_vef74")

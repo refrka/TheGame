@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="FaunaData" load_steps=2 format=3 uid="uid://b0cxl76n57n48"]
+
+[ext_resource type="Script" uid="uid://ceqjvbkqw5a1r" path="res://data/entity_data/fauna_data.gd" id="1_1mn1b"]
+
+[resource]
+script = ExtResource("1_1mn1b")
+fauna_key = 1
+rarity = "uncommon"
+entity_name = "Deer"
+entity_type = 5
+metadata/_custom_type_script = "uid://ceqjvbkqw5a1r"

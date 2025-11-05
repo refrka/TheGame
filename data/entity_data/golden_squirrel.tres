@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="FaunaData" load_steps=2 format=3 uid="uid://dsxy07ypgvk7p"]
+
+[ext_resource type="Script" uid="uid://ceqjvbkqw5a1r" path="res://data/entity_data/fauna_data.gd" id="1_n6og1"]
+
+[resource]
+script = ExtResource("1_n6og1")
+fauna_key = 3
+rarity = "epic"
+entity_name = "Golden squirrel"
+entity_type = 5
+metadata/_custom_type_script = "uid://ceqjvbkqw5a1r"

@@ -1,0 +1,21 @@
+[gd_scene load_steps=2 format=3 uid="uid://bq6llnyll6kkk"]
+
+[ext_resource type="Script" uid="uid://byuj6xfrsftvf" path="res://scripts/skill_list_row.gd" id="1_fjdg0"]
+
+[node name="SkillListRow" type="PanelContainer"]
+theme_type_variation = &"SkillListRowPanel"
+script = ExtResource("1_fjdg0")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="SkillName" type="Label" parent="HBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Skill"
+
+[node name="SkillValue" type="Label" parent="HBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 10

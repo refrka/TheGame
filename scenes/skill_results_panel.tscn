@@ -1,0 +1,38 @@
+[gd_scene load_steps=2 format=3 uid="uid://bprqepr4al6q6"]
+
+[ext_resource type="Script" uid="uid://lp3r83c6tqip" path="res://scripts/skill_results_panel.gd" id="1_s1nfl"]
+
+[node name="SkillResultsPanel" type="PanelContainer"]
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 22.0
+grow_horizontal = 2
+size_flags_vertical = 0
+script = ExtResource("1_s1nfl")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 2
+
+[node name="ResultsTitle" type="Label" parent="VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Results from %s:"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="ResultsBox" type="HBoxContainer" parent="VBoxContainer/HBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="ActionButton" type="Button" parent="VBoxContainer/HBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Collect"
+
+[node name="DismissButton" type="Button" parent="."]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 0
+text = "X"

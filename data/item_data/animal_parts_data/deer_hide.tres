@@ -1,0 +1,7 @@
+[gd_resource type="Resource" script_class="AnimalPartsData" load_steps=2 format=3 uid="uid://brxlrfokb74qb"]
+
+[ext_resource type="Script" uid="uid://borj8mtdwckyq" path="res://data/item_data/animal_parts_data/animal_parts_data.gd" id="1_on8ua"]
+
+[resource]
+script = ExtResource("1_on8ua")
+metadata/_custom_type_script = "uid://borj8mtdwckyq"

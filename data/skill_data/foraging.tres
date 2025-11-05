@@ -1,0 +1,7 @@
+[gd_resource type="Resource" script_class="SkillData" load_steps=2 format=3 uid="uid://co1ra63jbvgab"]
+
+[ext_resource type="Script" uid="uid://b0peixbtl1pji" path="res://data/skill_data/skill_data.gd" id="1_3kje0"]
+
+[resource]
+script = ExtResource("1_3kje0")
+skill_name = "Foraging"
