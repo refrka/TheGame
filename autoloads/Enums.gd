@@ -13,3 +13,4 @@ const PROVISION = itemEnums.Provision
 
 
 const LOCATION = worldEnums.Location
+const LOCATION_TAG = worldEnums.LocationTag

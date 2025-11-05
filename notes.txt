@@ -6,6 +6,9 @@
 
 > Next up: Locations, "Seek shelter"
 > Decide what to do with Starting Actions
+>>> Ditch Starting Actions
+>>> Start with an Event Panel for entering a location
+>>> Default forage/hunt/seek shelter values with additional options in the future?
 > Add a [Use] button to skills in list? on hover
 
 
