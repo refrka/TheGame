@@ -1,0 +1,14 @@
+
+
+
+> Last added: Inventory button appears, "add items" to inventory, EventList vbox to hold event panels
+
+
+> Next up: Locations, "Seek shelter"
+> Decide what to do with Starting Actions
+> Add a [Use] button to skills in list? on hover
+
+
+
+
+> "Discovered" lists in GameStateHandler

@@ -10,3 +10,5 @@ func add_item(item_data: ItemData) -> void:
 	if !unlocked:
 		unlocked = true
 		inventory_unlocked.emit()
+	item_list.append(item_data)
+	
